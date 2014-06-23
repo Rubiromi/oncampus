@@ -1,0 +1,7 @@
+<h1>Courses</h1>
+
+<h3><%= @course.name %></h3>
+<div>
+  <p><%= @course.description %></p>
+  <p><%= class_schedule(@course.start_date, @course.end_date) %></p>
+</div>

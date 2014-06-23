@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Oncampus</title>
+  <title><%= set_title(@title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https:////maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'layouts/nav' %>
 
-<%= yield %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<div class="jumbotron">
+  <p><%= yield %></p>
+
+</div>
+
+<footer> &copy; <%= Time.now.year %> - Hiromi De Young  </footer>
+
+
 
 </body>
 </html>
